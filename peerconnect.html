@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Meta and title -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>College Essentials | Peer Connect</title>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <a class="brand" href="index.html">College Essentials</a>
+      <nav>
+        <a href="marketplace.html">Marketplace</a>
+        <a href="peerconnect.html" class="active">Peer Connect</a>
+        <a href="about.html">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="page-header">
+      <h1>Peer Connect</h1>
+      <p>Find students by skills or subjects and connect for help.</p>
+    </section>
+
+    <!-- Search and filter -->
+    <section class="filters card">
+      <div class="filters-row">
+        <div class="field">
+          <label for="skillSearch">Search by skill/subject</label>
+          <input id="skillSearch" type="text" placeholder="e.g., JavaScript, Data Structures, MATLAB" />
+        </div>
+        <button id="clearSearchBtn" class="btn">Clear search</button>
+      </div>
+    </section>
+
+    <!-- Profiles grid -->
+    <section id="profilesGrid" class="grid three">
+      <!-- Student profile cards injected by JS -->
+    </section>
+
+    <!-- Help posts (static demo) -->
+    <section class="card">
+      <h2>Help posts</h2>
+      <p>Recent help requests from students (static examples).</p>
+      <ul id="helpPostsList" class="list">
+        <!-- Static posts injected by JS -->
+      </ul>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <small>Peer Connect — static profiles and help posts</small>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+  <script>
+    // Initialize peer connect page logic on load
+    document.addEventListener('DOMContentLoaded', () => {
+      App.initPeerConnect();
+    });
+  </script>
+</body>
+</html>
